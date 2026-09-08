@@ -50,7 +50,7 @@ public class TesteConfig implements CommandLineRunner {
 		categoryRepository.saveAll(Arrays.asList(cat1, cat2, cat3));
 		productRepository.saveAll(Arrays.asList(p1, p2, p3, p4, p5));
 		
-		p1.getCategories().add(cat2);//associaçao dos produtos com categiras
+		p1.getCategories().add(cat2);//associaçao dos produtos com categorias
 		p2.getCategories().add(cat1);
 		p2.getCategories().add(cat3);
 		p3.getCategories().add(cat3);
