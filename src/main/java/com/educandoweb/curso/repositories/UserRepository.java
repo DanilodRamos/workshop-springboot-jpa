@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.educandoweb.curso.entities.User;
 
-public interface UserRepository extends JpaRepository<User, Long> {//instancia objeto repositori que vai ter varias ações
-
+public interface UserRepository extends JpaRepository<User, Long> {
+    // instancia objeto repositório que vai ter
+    // várias ações
 }
