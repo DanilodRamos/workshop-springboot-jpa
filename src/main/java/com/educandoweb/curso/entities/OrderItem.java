@@ -15,7 +15,6 @@ public class OrderItem implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
-	
 	private OrderItemPK id = new OrderItemPK();
 
 	private Integer quantity;
@@ -32,7 +31,7 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 
-	@JsonIgnore //pq ta chamando dando loop infinitito
+	@JsonIgnore // pq ta chamando dando loop infinitito
 	public Order getOrder() {
 		return id.getOrder();
 	}
@@ -40,7 +39,8 @@ public class OrderItem implements Serializable {
 	public void setOrder(Order order) {
 		id.setOrder(order);
 	}
-
+	
+	
 	public Product getProduct() {
 		return id.getProduct();
 	}
