@@ -14,18 +14,20 @@ import com.educandoweb.curso.services.OrderService;
 
 //anotation
 @RestController
-//nome pro recurso
-@RequestMapping(value = "/Orders")
+@RequestMapping(value = "/orders")//nome pro recurso
 public class OrderResource {
+	
 	//metodo pra ve se funcionca com end point
 	//dependencia para o service
 	@Autowired
 	private OrderService service;
+	
 	@GetMapping
 	public ResponseEntity<List<Order>> findAll() {//metodo pra retornar os usuarios
 		List<Order> list = service.findAll();
 	return ResponseEntity.ok().body(list);
 	}
+	
 	@GetMapping(value = "/{id}")
 	public ResponseEntity<Order> findByID(@PathVariable Long id){
 		Order obj = service.findById(id);
